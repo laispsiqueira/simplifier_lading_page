@@ -1,7 +1,12 @@
 
 import React from 'react';
+import { AudienceType } from '../constants';
 
-const About: React.FC = () => {
+interface AboutProps {
+  audience: AudienceType;
+}
+
+const About: React.FC<AboutProps> = ({ audience }) => {
   return (
     <section id="sobre" className="py-24 bg-white border-t border-light-teal">
       <div className="max-w-4xl mx-auto px-6">
@@ -24,30 +29,27 @@ const About: React.FC = () => {
             Seu trabalho é transformar confusão em estrutura. Tirar o peso do que está desorganizado e devolver clareza para que decisões deixem de ser um fardo.
           </p>
           
-          <div className="grid md:grid-cols-2 gap-8 my-12">
-            <div className="bg-light-teal/30 p-8 rounded-2xl border border-light-teal">
-              <h3 className="font-bold text-primary-teal mb-3">Para empresas</h3>
-              <p className="text-sm">
-                A Simplifier cria soluções digitais que organizam processos, decisões e rotinas, ajudando o negócio a funcionar de forma previsível, sem depender da sobrecarga constante de quem está por trás dele.
-              </p>
-            </div>
-            <div className="bg-orange-brand/5 p-8 rounded-2xl border border-orange-brand/20">
-              <h3 className="font-bold text-orange-brand mb-3">Para pessoas</h3>
-              <p className="text-sm">
-                Desenvolve um ecossistema simples, funcional e conectado que organiza a vida fora da cabeça (eventos importantes, finanças, hábitos, cuidados pessoais e decisões do dia a dia).
-              </p>
-            </div>
+          <div className="my-12">
+            {audience === 'empresas' ? (
+              <div className="bg-light-teal/30 p-8 rounded-2xl border border-light-teal">
+                <h3 className="font-bold text-primary-teal mb-3">Para empresas</h3>
+                <p className="text-sm">
+                  A Simplifier cria soluções digitais que organizam processos, decisões e rotinas, ajudando o negócio a funcionar de forma previsível, sem depender da sobrecarga constante de quem está por trás dele.
+                </p>
+              </div>
+            ) : (
+              <div className="bg-orange-brand/5 p-8 rounded-2xl border border-orange-brand/20">
+                <h3 className="font-bold text-orange-brand mb-3">Para pessoas</h3>
+                <p className="text-sm">
+                  Desenvolve um ecossistema simples, funcional e conectado que organiza a vida fora da cabeça (eventos importantes, finanças, hábitos, cuidados pessoais e decisões do dia a dia).
+                </p>
+              </div>
+            )}
           </div>
 
           <p>
             A Simplifier acredita que tecnologia só faz sentido quando respeita a realidade de quem usa, reduz esforço mental e cria espaço para viver melhor.
           </p>
-          
-          <div className="text-center mt-12">
-            <p className="text-2xl font-title text-dark-teal italic">
-              "Ela não existe para vender ferramentas. Existe para resolver um problema real."
-            </p>
-          </div>
         </div>
       </div>
     </section>

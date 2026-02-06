@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Manifesto from './components/Manifesto'; // Repurposed as ProblemSection
-import Process from './components/Process'; // Repurposed as SolutionSection
+import ProblemSection from './components/ProblemSection';
+import Manifesto from './components/Manifesto'; 
+import Process from './components/Process'; 
 import DeliverySection from './components/DeliverySection';
 import ResultsSection from './components/ResultsSection';
 import About from './components/About';
@@ -46,13 +47,13 @@ const App: React.FC = () => {
       </div>
 
       <main>
-        {/* Seção 1: O Problema */}
-        <Manifesto audience={audience} />
+        {/* Seção 1: O Problema (Formerly Manifesto in prev versions) */}
+        <ProblemSection audience={audience} />
         
         {/* Seção 2: Solução / Atuação */}
         <Process audience={audience} />
 
-        {/* Seção 3: Entregáveis / Ecossistema */}
+        {/* Seção 3: Entregáveis / Ecossistema (ID: #produtos) */}
         <DeliverySection audience={audience} />
 
         {/* Seção 4: Para quem é + Resultados */}
@@ -74,8 +75,11 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        {/* Sobre a Simplifier (Comum) */}
-        <About />
+        {/* Manifesto Real (Page 2 content) */}
+        <Manifesto audience={audience} />
+
+        {/* Sobre a Simplifier (Clareza muda tudo) */}
+        <About audience={audience} />
       </main>
 
       <Footer />

@@ -1,11 +1,10 @@
 
 import React from 'react';
-import { NAV_LINKS } from '../constants';
 import { Instagram, Mail, MessageCircle } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contato" className="bg-dark-teal text-white py-20 border-t border-white/10">
+    <footer className="bg-dark-teal text-white py-20 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-white/10">
           <div className="space-y-6">
@@ -33,21 +32,22 @@ const Footer: React.FC = () => {
             <h4 className="text-orange-brand font-bold mb-6 uppercase tracking-widest text-xs">Produtos</h4>
             <ul className="space-y-4 text-white/70 text-sm">
               <li><a href="#produtos" className="hover:text-white transition-colors">Casar Inteligente</a></li>
+              <li><a href="#produtos" className="hover:text-white transition-colors">Para Pessoas</a></li>
+              <li><a href="#produtos" className="hover:text-white transition-colors">Para Empresas</a></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-orange-brand font-bold mb-6 uppercase tracking-widest text-xs">Institucional</h4>
             <ul className="space-y-4 text-white/70 text-sm">
-              <li><a href="#manifesto" className="hover:text-white transition-colors">Sobre a Simplifier</a></li>
+              <li><a href="#sobre" className="hover:text-white transition-colors">Sobre a Simplifier</a></li>
               <li><a href="#manifesto" className="hover:text-white transition-colors">Manifesto</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-orange-brand font-bold mb-6 uppercase tracking-widest text-xs">Contato</h4>
+            <h4 className="text-orange-brand font-bold mb-6 uppercase tracking-widest text-xs">Legal</h4>
             <ul className="space-y-4 text-white/70 text-sm">
-              <li><a href="mailto:contato@simplifier.com.br" className="hover:text-white transition-colors underline">contato@simplifier.com.br</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Política de Privacidade</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Termos de Uso</a></li>
             </ul>

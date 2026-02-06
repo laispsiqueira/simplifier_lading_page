@@ -11,7 +11,7 @@ const DeliverySection: React.FC<DeliverySectionProps> = ({ audience }) => {
   const data = CONTENT[audience].deliverables;
 
   return (
-    <section id="solucoes" className="py-24 bg-white">
+    <section id="produtos" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="font-title text-4xl font-bold text-primary-teal mb-16 text-left">{data.title}</h2>
         

@@ -19,9 +19,9 @@ export const AUDIENCE_TYPES = {
 export type AudienceType = typeof AUDIENCE_TYPES[keyof typeof AUDIENCE_TYPES];
 
 export const NAV_LINKS = [
+  { label: 'Manifesto', href: '#manifesto' },
   { label: 'Sobre a Simplifier', href: '#sobre' },
-  { label: 'Produtos', href: '#solucoes' },
-  { label: 'Contato', href: '#contato' },
+  { label: 'Produtos', href: '#produtos' },
 ];
 
 export const PRINCIPLES = [
@@ -53,7 +53,7 @@ export const CONTENT = {
       headline: "Tecnologia feita para simplificar.",
       subheadline: "Criamos soluções digitais que organizam decisões, reduzem sobrecarga e tornam empresas mais previsíveis.",
       cta: "Falar com a Simplifier",
-      ctaLink: "#contato"
+      ctaLink: "#produtos"
     },
     problem: {
       title: "O problema não é falta de trabalho. É excesso de confusão.",
@@ -101,7 +101,7 @@ export const CONTENT = {
     ctaFinal: {
       title: "Seu negócio pode funcionar sem te consumir",
       button: "Falar com a Simplifier",
-      link: "#contato"
+      link: "#produtos"
     }
   },
   [AUDIENCE_TYPES.INDIVIDUALS]: {
@@ -109,7 +109,7 @@ export const CONTENT = {
       headline: "Menos carga mental. Mais clareza para viver.",
       subheadline: "Um ecossistema digital simples para organizar sua vida fora da cabeça.",
       cta: "Conhecer o ecossistema",
-      ctaLink: "#solucoes"
+      ctaLink: "#produtos"
     },
     problem: {
       title: "O cansaço não vem só do que você faz. Vem do que você carrega na mente.",
@@ -152,7 +152,7 @@ export const CONTENT = {
     ctaFinal: {
       title: "Organizar a vida é um ato de cuidado",
       button: "Entrar no ecossistema",
-      link: "#solucoes"
+      link: "#produtos"
     }
   }
 };
