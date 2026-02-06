@@ -7,35 +7,36 @@ interface ProcessProps {
 }
 
 const Process: React.FC<ProcessProps> = ({ audience }) => {
-  const data = CONTENT[audience].process;
+  const data = CONTENT[audience].solution;
 
   return (
-    <section className="py-24 bg-white border-y border-light-teal">
+    <section className="py-24 bg-slate-50 border-y border-light-teal">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-left mb-16 space-y-4">
           <h2 className="font-title text-4xl font-bold text-primary-teal">{data.title}</h2>
-          <p className="text-gray-brand max-w-xl">{data.subtitle}</p>
+          {data.description && (
+             <p className="text-gray-brand max-w-xl text-lg">{data.description}</p>
+          )}
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {data.steps.map((step, idx) => (
-            <div key={idx} className="relative p-10 bg-slate-50 rounded-3xl group hover:bg-white hover:shadow-xl transition-all border border-transparent hover:border-light-teal flex flex-col h-full">
-              <span className="text-orange-brand font-title text-xs font-bold uppercase tracking-widest mb-4">
-                {audience === 'empresas' ? `Fase ${step.number}` : `Passo ${step.number}`}
-              </span>
-              <h3 className="text-xl font-bold text-dark-teal mb-4">{step.title}</h3>
-              <p className="text-gray-brand leading-relaxed">
-                {step.text}
-              </p>
-            </div>
-          ))}
-        </div>
-        
-        <div className="mt-16 p-8 bg-light-teal/30 rounded-2xl text-center">
-          <p className="text-dark-teal font-medium italic">
-            Nota: Trabalhamos com ciclos de melhoria contínua. Não entregamos um projeto e sumimos.
-          </p>
-        </div>
+        {data.blocks && data.blocks.length > 0 ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {data.blocks.map((block, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-start gap-4 border border-light-teal">
+                <div className="w-12 h-12 bg-light-teal rounded-xl flex items-center justify-center text-primary-teal">
+                  {block.icon}
+                </div>
+                <h3 className="text-xl font-bold text-dark-teal">{block.title}</h3>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="bg-white p-12 rounded-3xl border border-light-teal text-center shadow-sm">
+             <p className="text-2xl font-title text-dark-teal">
+               "Tudo na palma da mão, funcional e alinhado com o todo."
+             </p>
+          </div>
+        )}
       </div>
     </section>
   );
