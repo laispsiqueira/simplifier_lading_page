@@ -27,6 +27,9 @@ const Process: React.FC<ProcessProps> = ({ audience }) => {
                   {block.icon}
                 </div>
                 <h3 className="text-xl font-bold text-dark-teal">{block.title}</h3>
+                {block.description && (
+                  <p className="text-sm text-gray-brand/80 leading-relaxed font-light">{block.description}</p>
+                )}
               </div>
             ))}
           </div>

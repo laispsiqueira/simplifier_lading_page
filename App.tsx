@@ -79,7 +79,7 @@ const App: React.FC = () => {
         <Manifesto audience={audience} />
 
         {/* Sobre a Simplifier (Clareza muda tudo) */}
-        <About audience={audience} />
+        <About audience={audience} setAudience={setAudience} />
       </main>
 
       <Footer />

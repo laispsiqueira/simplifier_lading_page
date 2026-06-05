@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ audience }) => {
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         <div className="space-y-8 text-left">
           <div className="inline-block px-4 py-1.5 bg-white shadow-sm border border-light-teal rounded-full text-orange-brand font-bold text-xs tracking-widest uppercase">
-            {audience === 'empresas' ? 'PARA SEU NEGÓCIO' : 'PARA SUA VIDA'}
+            {content.tag}
           </div>
           
           <h1 className="font-title text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-dark-teal font-bold">

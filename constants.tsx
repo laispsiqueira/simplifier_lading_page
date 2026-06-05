@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Layout, BarChart3, Zap, Users, Search, Brain, Clock, Heart, Shield, Lightbulb, UserCheck, TrendingUp, CheckCircle2, Workflow, Database, LifeBuoy } from 'lucide-react';
+import { Layout, BarChart3, Zap, Users, Search, Brain, Clock, Heart, Shield, Lightbulb, UserCheck, TrendingUp, CheckCircle2, Workflow, Database, LifeBuoy, ShoppingBag } from 'lucide-react';
 
 export const COLORS = {
   primary: '#157D9A',
@@ -50,109 +50,164 @@ export const PRINCIPLES = [
 export const CONTENT = {
   [AUDIENCE_TYPES.COMPANIES]: {
     hero: {
-      headline: "Tecnologia feita para simplificar.",
-      subheadline: "Criamos soluções digitais que organizam decisões, reduzem sobrecarga e tornam empresas mais previsíveis.",
-      cta: "Falar com a Simplifier",
+      tag: "Para seu negócio",
+      headline: "A maioria automatiza o caos. A gente organiza primeiro.",
+      subheadline: "Estruturamos processos, decisões e times para que seu negócio funcione — sem depender só de você.",
+      cta: "Falar com a Simplifier →",
       ctaLink: "#produtos"
     },
     problem: {
-      title: "O problema não é falta de trabalho. É excesso de confusão.",
+      title: "O problema não é falta de esforço. É falta de estrutura.",
       subtitle: "",
       items: [
-        "Processos espalhados",
-        "Times desalinhados",
-        "Automações sem critério",
-        "Negócio dependente de pessoas",
-        "Sobrecarga mental constante"
+        "Processos que só funcionam quando você está presente",
+        "Time que decide sem critério claro",
+        "Automações que vieram antes da organização",
+        "Negócio que cresce, mas não fica mais fácil"
       ]
     },
     solution: {
-      title: "Organizar antes de automatizar",
-      description: "Não vendemos ferramentas isoladas. Criamos estrutura.",
+      title: "Organizar antes de automatizar.",
+      description: "Ferramentas não resolvem estrutura ruim. Por isso começamos pelo que realmente trava o negócio.",
       blocks: [
-        { title: "Clareza de processos", icon: <Search className="w-6 h-6" /> },
-        { title: "Organização das decisões", icon: <Layout className="w-6 h-6" /> },
-        { title: "Automação inteligente", icon: <Zap className="w-6 h-6" /> },
-        { title: "Sistemas sustentáveis", icon: <TrendingUp className="w-6 h-6" /> }
+        { 
+          title: "Clareza de processos", 
+          description: "Quem faz o quê, quando e por quê. Sem depender da memória de ninguém.",
+          icon: <Search className="w-6 h-6" /> 
+        },
+        { 
+          title: "Organização das decisões", 
+          description: "Critérios definidos antes do problema aparecer. Menos urgência, mais previsibilidade.",
+          icon: <Layout className="w-6 h-6" /> 
+        },
+        { 
+          title: "Automação inteligente", 
+          description: "Automatizamos o que já funciona. Não o que ainda está quebrado.",
+          icon: <Zap className="w-6 h-6" /> 
+        },
+        { 
+          title: "Sistemas sustentáveis", 
+          description: "Construídos para durar — e para crescer sem você precisar reinventar tudo.",
+          icon: <TrendingUp className="w-6 h-6" /> 
+        }
       ]
     },
     deliverables: {
       title: "O que entregamos",
+      subtitle: "",
       items: [
-        { title: "Automação de fluxos (WhatsApp)", description: "Vendas e atendimento automatizado", icon: <Workflow className="w-6 h-6" /> },
-        { title: "Organização operacional", description: "Estruturação de rotinas e processos", icon: <Layout className="w-6 h-6" /> },
-        { title: "Sistemas sob medida", description: "Adaptados à sua realidade", icon: <Database className="w-6 h-6" /> },
-        { title: "Apoio à tomada de decisão", description: "Dados claros para guiar o negócio", icon: <BarChart3 className="w-6 h-6" /> }
+        {
+          category: "E-commerce",
+          title: "Sua loja pronta para vender. Sem dor de cabeça técnica.",
+          description: "Você não precisa entender de tecnologia para ter um e-commerce profissional. Precisa de alguém que entenda por você.",
+          icon: <ShoppingBag className="w-6 h-6" />,
+          highlight: true,
+          link: "https://wa.me/seunumerowhatsapp"
+        },
+        { 
+          category: "Automações de processos",
+          title: "O que hoje depende de você, amanhã roda sozinho.", 
+          description: "Automatizamos as tarefas que consomem o seu time para que as pessoas certas foquem no que só elas podem fazer.", 
+          icon: <Workflow className="w-6 h-6" /> 
+        },
+        { 
+          category: "Sistemas sob medida",
+          title: "Construídos para o seu negócio. Não para o negócio de todo mundo.", 
+          description: "Sistemas desenvolvidos de forma personalizada para se adaptar perfeitamente à sua operação, sem complexidade desnecessária.", 
+          icon: <Database className="w-6 h-6" /> 
+        }
       ]
     },
     audience: {
       title: "Para quem é",
-      description: "Pequenos e médios negócios de serviços que cresceram sem estrutura e sentem o peso do dia a dia."
+      description: "Pequenas e médias empresas que já trabalham muito — e querem trabalhar melhor."
     },
     results: {
-      title: "Resultados esperados",
+      title: "Resultados que você vai sentir",
       items: [
-        "Menos dependência do dono",
-        "Rotinas mais simples",
-        "Decisões mais claras",
-        "Tempo para estratégia e vida pessoal"
+        "Mais horas do seu dia de volta",
+        "Menos dependência de pessoas-chave",
+        "Decisões tomadas com mais rapidez",
+        "Um negócio que funciona sem você estar em tudo"
       ]
     },
     ctaFinal: {
-      title: "Seu negócio pode funcionar sem te consumir",
-      button: "Falar com a Simplifier",
-      link: "#produtos"
+      title: "Seu negócio pode funcionar sem te consumir.",
+      button: "Falar com a Simplifier →",
+      link: "https://wa.me/seunumerowhatsapp"
     }
   },
   [AUDIENCE_TYPES.INDIVIDUALS]: {
     hero: {
+      tag: "Para você",
       headline: "Menos carga mental. Mais clareza para viver.",
-      subheadline: "Um ecossistema digital simples para organizar sua vida fora da cabeça.",
-      cta: "Conhecer o ecossistema",
+      subheadline: "Um ecossistema de ferramentas simples para tirar da sua cabeça o que não precisa estar lá.",
+      cta: "Conhecer o ecossistema →",
       ctaLink: "#produtos"
     },
     problem: {
       title: "O cansaço não vem só do que você faz. Vem do que você carrega na mente.",
       subtitle: "",
       items: [
-        "Pensar em tudo o tempo todo",
-        "Decisões acumuladas",
-        "Organização fragmentada",
-        "Ansiedade por falta de clareza"
+        "Decisões adiadas por falta de clareza",
+        "Rotina organizada em vários lugares — e em nenhum",
+        "Ansiedade de não saber o que veio antes e o que vem depois"
       ]
     },
     solution: {
-      title: "Organização mental, simples e conectada",
-      description: "Tudo na palma da mão, funcional e alinhado com o todo.",
-      blocks: [] // For Individuals, we might not have visual blocks, or use empty to trigger default simple text view
+      title: "Tudo na palma da mão. Funcional e alinhado com o todo.",
+      description: "",
+      blocks: []
     },
     deliverables: {
       title: "O Ecossistema Simplifier",
+      subtitle: "Cinco ferramentas. Uma lógica só: tirar peso da sua cabeça.",
       items: [
-        { title: "Casar Inteligente", description: "Planejamento consciente e seguro de casamentos", icon: <Heart className="w-6 h-6" />, highlight: true },
-        { title: "Smart Pocket", description: "Organização financeira simples", icon: <BarChart3 className="w-6 h-6" /> },
-        { title: "Cozinha Inteligente", description: "Receitas com o que você já tem em casa", icon: <UserCheck className="w-6 h-6" /> },
-        { title: "Hábitos & Treinos", description: "Planejamento realista para cuidar de si", icon: <Brain className="w-6 h-6" /> },
-        { title: "Task check", description: "Organizador de tarefas individuais ou em grupo", icon: <CheckCircle2 className="w-6 h-6" /> }
+        { 
+          title: "Casa Inteligente", 
+          description: "Planeje, conheça e organize seu espaço. Sem planilha, sem papel.", 
+          icon: <Heart className="w-6 h-6" />, 
+          highlight: true 
+        },
+        { 
+          title: "Smart Pocket", 
+          description: "Suas finanças pessoais de forma simples — sem precisar ser especialista.", 
+          icon: <BarChart3 className="w-6 h-6" /> 
+        },
+        { 
+          title: "Cozinha Inteligente", 
+          description: "Menos desperdício. Mais clareza na hora de cozinhar.", 
+          icon: <UserCheck className="w-6 h-6" /> 
+        },
+        { 
+          title: "Hábitos & Treinos", 
+          description: "Rotina que funciona. Objetivos que avançam.", 
+          icon: <Brain className="w-6 h-6" /> 
+        },
+        { 
+          title: "Task Check", 
+          description: "Tudo que precisa ser feito, num lugar só.", 
+          icon: <CheckCircle2 className="w-6 h-6" /> 
+        }
       ]
     },
     audience: {
       title: "Para quem é",
-      description: "Pessoas que querem viver com menos peso mental e mais presença, sem sistemas complicados ou culpa."
+      description: "Para quem vive muito rápido e quer parar de improvisar a própria vida."
     },
     results: {
       title: "Como isso ajuda na prática",
       items: [
-        "Menos decisões repetitivas",
-        "Mais clareza no dia a dia",
-        "Redução da ansiedade",
-        "Vida organizada fora da cabeça"
+        "Menos decisões repetidas todo dia",
+        "Mais presença no que realmente importa",
+        "Rotina com intenção, não só com urgência",
+        "Cabeça mais leve. Vida mais sua."
       ]
     },
     ctaFinal: {
-      title: "Organizar a vida é um ato de cuidado",
-      button: "Entrar no ecossistema",
-      link: "#produtos"
+      title: "Organizar a vida é um ato de cuidado.",
+      button: "Entrar no ecossistema →",
+      link: "https://wa.me/seunumerowhatsapp"
     }
   }
 };

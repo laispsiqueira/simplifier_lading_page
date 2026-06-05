@@ -13,9 +13,14 @@ const DeliverySection: React.FC<DeliverySectionProps> = ({ audience }) => {
   return (
     <section id="produtos" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="font-title text-4xl font-bold text-primary-teal mb-16 text-left">{data.title}</h2>
+        <div className="mb-16 text-left space-y-4">
+          <h2 className="font-title text-4xl font-bold text-primary-teal">{data.title}</h2>
+          {data.subtitle && (
+            <p className="text-xl text-gray-brand/80 font-light max-w-2xl">{data.subtitle}</p>
+          )}
+        </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={`grid md:grid-cols-2 ${data.items.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-8`}>
           {data.items.map((item, idx) => (
             <div 
               key={idx} 
@@ -25,12 +30,23 @@ const DeliverySection: React.FC<DeliverySectionProps> = ({ audience }) => {
                 : 'bg-white border-light-teal hover:border-orange-brand/50 hover:shadow-lg'
               }`}
             >
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${
-                item.highlight ? 'bg-white/10 text-orange-brand' : 'bg-light-teal text-primary-teal'
-              }`}>
-                {item.icon}
+              <div className="flex justify-between items-start mb-6">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                  item.highlight ? 'bg-white/10 text-orange-brand' : 'bg-light-teal text-primary-teal'
+                }`}>
+                  {item.icon}
+                </div>
+                {item.category && (
+                  <span className={`text-[10px] tracking-wider uppercase font-extrabold px-3 py-1 rounded-full ${
+                    item.highlight 
+                    ? 'bg-orange-brand text-white' 
+                    : 'bg-light-teal text-primary-teal border border-primary-teal/10'
+                  }`}>
+                    {item.category}
+                  </span>
+                )}
               </div>
-              <h3 className={`text-xl font-bold mb-3 ${item.highlight ? 'text-white' : 'text-dark-teal'}`}>
+              <h3 className={`text-xl font-bold mb-3 leading-snug ${item.highlight ? 'text-white' : 'text-dark-teal'}`}>
                 {item.title}
               </h3>
               <p className={`text-sm leading-relaxed ${item.highlight ? 'text-white/80' : 'text-gray-brand'}`}>
@@ -38,7 +54,7 @@ const DeliverySection: React.FC<DeliverySectionProps> = ({ audience }) => {
               </p>
               {item.highlight && (
                 <div className="mt-6 pt-6 border-t border-white/10">
-                  <a href="#" className="flex items-center gap-2 text-orange-brand font-bold text-sm hover:text-white transition-colors">
+                  <a href={item.link || '#'} target={item.link ? "_blank" : undefined} rel={item.link ? "noopener noreferrer" : undefined} className="flex items-center gap-2 text-orange-brand font-bold text-sm hover:text-white transition-colors">
                     Saiba mais <Check className="w-4 h-4" />
                   </a>
                 </div>
