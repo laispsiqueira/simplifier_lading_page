@@ -33,9 +33,8 @@ const Hero: React.FC<HeroProps> = ({ audience }) => {
           <h1 className="font-title text-5xl md:text-6xl lg:text-[76px] leading-[1.08] text-dark-teal font-extrabold tracking-tight">
             <span className=" block mb-1 text-[#157D9A] font-extrabold">Organização,</span>
             <span className=" block mb-1 text-[#157D9A] font-extrabold">Direcionamento,</span>
-            <span className=" block mb-1 text-[#157D9A] font-extrabold">Clareza </span>
-            <span className="text-orange-brand  font-normal">para assim,</span><br />
-            <span className="text-orange-brand  font-normal">criar autonomia
+            <span className=" block mb-1 text-[#157D9A] font-extrabold">Clareza para,</span>
+            <span className="text-orange-brand  font-normal">assim criar autonomia
             </span>
           </h1>
           
