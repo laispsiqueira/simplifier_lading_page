@@ -194,7 +194,7 @@ const Navbar: React.FC<NavbarProps> = ({ audience, setAudience, currentPath, onN
               })}
             </ul>
             <a 
-              href="https://wa.me/seunumerowhatsapp" 
+              href="https://w.app/simplifier-site" 
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#157D9A] text-white px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-[#0d5164] transition-all hover:scale-[1.02] hover:shadow-md shrink-0"
@@ -288,7 +288,7 @@ const Navbar: React.FC<NavbarProps> = ({ audience, setAudience, currentPath, onN
 
             <div className="pt-4">
               <a 
-                href="https://wa.me/seunumerowhatsapp"
+                href="https://w.app/simplifier-site"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full text-center inline-flex justify-center items-center gap-2 bg-[#157D9A] text-white py-4 rounded-xl font-bold text-base hover:bg-[#0d5164] transition-all hover:scale-[1.01] shadow"

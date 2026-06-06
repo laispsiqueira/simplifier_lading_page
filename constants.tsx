@@ -134,7 +134,7 @@ export const CONTENT = {
     ctaFinal: {
       title: "Seu negócio pode funcionar sem te consumir.",
       button: "Falar com a Simplifier →",
-      link: "https://wa.me/seunumerowhatsapp"
+      link: "https://w.app/simplifier-site"
     }
   },
   [AUDIENCE_TYPES.INDIVIDUALS]: {
@@ -207,7 +207,7 @@ export const CONTENT = {
     ctaFinal: {
       title: "Organizar a vida é um ato de cuidado.",
       button: "Entrar no ecossistema →",
-      link: "https://wa.me/seunumerowhatsapp"
+      link: "https://w.app/simplifier-site"
     }
   }
 };

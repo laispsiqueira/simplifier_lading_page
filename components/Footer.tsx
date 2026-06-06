@@ -16,10 +16,10 @@ const Footer: React.FC = () => {
               Ajudamos pequenos negócios a crescerem com leveza, devolvendo tempo para o que importa.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-brand transition-colors" title="Instagram">
+              <a href="https://www.instagram.com/simplifier.tech/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-brand transition-colors" title="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://wa.me/seunumerowhatsapp" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-brand transition-colors" title="WhatsApp">
+              <a href="https://w.app/simplifier-site" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-brand transition-colors" title="WhatsApp">
                 <MessageCircle className="w-5 h-5" />
               </a>
               <a href="mailto:contato@simplifier.com.br" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-brand transition-colors" title="Email">
@@ -31,17 +31,17 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-orange-brand font-bold mb-6 uppercase tracking-widest text-xs">Produtos</h4>
             <ul className="space-y-4 text-white/70 text-sm">
-              <li><a href="#produtos" className="hover:text-white transition-colors">Casar Inteligente</a></li>
-              <li><a href="#produtos" className="hover:text-white transition-colors">Para Pessoas</a></li>
-              <li><a href="#produtos" className="hover:text-white transition-colors">Para Empresas</a></li>
+              <li><a href="/ecommerce" className="hover:text-white transition-colors">E-commerce</a></li>
+              <li><a href="/#produtos" className="hover:text-white transition-colors">Automação de Processos</a></li>
+              <li><a href="/#produtos" className="hover:text-white transition-colors">Sistemas Sob Medida</a></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-orange-brand font-bold mb-6 uppercase tracking-widest text-xs">Institucional</h4>
             <ul className="space-y-4 text-white/70 text-sm">
-              <li><a href="#sobre" className="hover:text-white transition-colors">Sobre a Simplifier</a></li>
-              <li><a href="#manifesto" className="hover:text-white transition-colors">Manifesto</a></li>
+              <li><a href="/#sobre" className="hover:text-white transition-colors">Sobre a Simplifier</a></li>
+              <li><a href="/#manifesto" className="hover:text-white transition-colors">Manifesto</a></li>
             </ul>
           </div>
           

@@ -134,7 +134,7 @@ const Hero: React.FC<HeroProps> = ({ audience }) => {
             
             <div className="pt-2">
               <a 
-                href="https://wa.me/seunumerowhatsapp"
+                href="https://w.app/simplifier-site"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-slate-800 font-extrabold text-sm hover:text-primary-teal transition-colors"

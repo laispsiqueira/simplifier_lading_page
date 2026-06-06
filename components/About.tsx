@@ -68,14 +68,7 @@ const About: React.FC<AboutProps> = ({ audience, setAudience }) => {
             )}
             
             {/* Soft button to switch to the opposite section so users can discover both wings easily */}
-            {isCompanies ? (
-              <button
-                onClick={() => handleSwitch(AUDIENCE_TYPES.INDIVIDUALS)}
-                className="w-full sm:w-auto inline-flex items-center justify-center border border-primary-teal/30 text-primary-teal px-10 py-5 rounded-xl font-semibold text-base hover:bg-light-teal/55 transition-all hover:scale-[1.02]"
-              >
-                Ver versão Para Pessoas
-              </button>
-            ) : (
+            {!isCompanies && (
               <button
                 onClick={() => handleSwitch(AUDIENCE_TYPES.COMPANIES)}
                 className="w-full sm:w-auto inline-flex items-center justify-center border border-orange-brand/30 text-orange-brand px-10 py-5 rounded-xl font-semibold text-base hover:bg-orange-brand/5 transition-all hover:scale-[1.02]"

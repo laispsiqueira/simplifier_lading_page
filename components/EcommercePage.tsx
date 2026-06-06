@@ -29,8 +29,8 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const WHATSAPP_LINK = "https://wa.me/seunumerowhatsapp?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%23criação%20de%20loja%20online.";
-  const WHATSAPP_DUVIDA_LINK = "https://wa.me/seunumerowhatsapp?text=Olá!%20Tenho%20algumas%20dúvidas%20sobre%20meu%20projeto%20de%20e-commerce.%20Podemos%20conversar?";
+  const WHATSAPP_LINK = "https://w.app/simplifier-site";
+  const WHATSAPP_DUVIDA_LINK = "https://w.app/simplifier-site";
 
   const inclusions = [
     {
