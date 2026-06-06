@@ -52,13 +52,28 @@ const DeliverySection: React.FC<DeliverySectionProps> = ({ audience }) => {
               <p className={`text-sm leading-relaxed ${item.highlight ? 'text-white/80' : 'text-gray-brand'}`}>
                 {item.description}
               </p>
-              {item.highlight && (
+              {item.ctaText ? (
+                <div className={`mt-6 pt-6 border-t ${item.highlight ? 'border-white/10' : 'border-slate-100'}`}>
+                  <a 
+                    href={item.link || '#'} 
+                    target={item.link && item.link.startsWith('/') ? undefined : '_blank'} 
+                    rel={item.link && item.link.startsWith('/') ? undefined : 'noopener noreferrer'} 
+                    className={`inline-flex items-center gap-2 font-bold text-sm transition-colors ${
+                      item.highlight 
+                      ? 'text-orange-brand hover:text-white' 
+                      : 'text-[#157D9A] hover:text-[#0d5164]'
+                    }`}
+                  >
+                    {item.ctaText}
+                  </a>
+                </div>
+              ) : item.highlight ? (
                 <div className="mt-6 pt-6 border-t border-white/10">
                   <a href={item.link || '#'} target={item.link ? "_blank" : undefined} rel={item.link ? "noopener noreferrer" : undefined} className="flex items-center gap-2 text-orange-brand font-bold text-sm hover:text-white transition-colors">
                     Saiba mais <Check className="w-4 h-4" />
                   </a>
                 </div>
-              )}
+              ) : null}
             </div>
           ))}
         </div>

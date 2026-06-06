@@ -35,19 +35,36 @@ const Navbar: React.FC<NavbarProps> = ({ audience, setAudience, currentPath, onN
   const handleNavLinkClick = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    if (currentPath !== '/') {
-      onNavigate('/');
-      // Wait for page transition, then scroll to hash if needed
-      setTimeout(() => {
+    
+    if (href === '#manifesto' || href === '#sobre') {
+      if (currentPath !== '/manifesto') {
+        onNavigate('/manifesto');
+        setTimeout(() => {
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 120);
+      } else {
         const target = document.querySelector(href);
         if (target) {
           target.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 100);
+      }
     } else {
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
+      if (currentPath !== '/') {
+        onNavigate('/');
+        setTimeout(() => {
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 120);
+      } else {
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     }
   };

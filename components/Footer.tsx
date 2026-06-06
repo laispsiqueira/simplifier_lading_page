@@ -40,8 +40,8 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-orange-brand font-bold mb-6 uppercase tracking-widest text-xs">Institucional</h4>
             <ul className="space-y-4 text-white/70 text-sm">
-              <li><a href="/#sobre" className="hover:text-white transition-colors">Sobre a Simplifier</a></li>
-              <li><a href="/#manifesto" className="hover:text-white transition-colors">Manifesto</a></li>
+              <li><a href="/manifesto#sobre" className="hover:text-white transition-colors">Sobre a Simplifier</a></li>
+              <li><a href="/manifesto#manifesto" className="hover:text-white transition-colors">Manifesto</a></li>
             </ul>
           </div>
           

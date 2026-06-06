@@ -102,25 +102,32 @@ export const CONTENT = {
           description: "Você não precisa entender de tecnologia para ter um e-commerce profissional. Precisa de alguém que entenda por você.",
           icon: <ShoppingBag className="w-6 h-6" />,
           highlight: true,
-          link: "/ecommerce"
+          link: "/ecommerce",
+          ctaText: "Quero minha loja online →"
         },
         { 
           category: "Automações de processos",
           title: "O que hoje depende de você, amanhã roda sozinho.", 
           description: "Automatizamos as tarefas que consomem o seu time para que as pessoas certas foquem no que só elas podem fazer.", 
-          icon: <Workflow className="w-6 h-6" /> 
+          icon: <Workflow className="w-6 h-6" />,
+          highlight: false,
+          link: "https://w.app/simplifier-site",
+          ctaText: "Quero automatizar minha operação →"
         },
         { 
           category: "Sistemas sob medida",
           title: "Construídos para o seu negócio. Não para o negócio de todo mundo.", 
           description: "Sistemas desenvolvidos de forma personalizada para se adaptar perfeitamente à sua operação, sem complexidade desnecessária.", 
-          icon: <Database className="w-6 h-6" /> 
+          icon: <Database className="w-6 h-6" />,
+          highlight: false,
+          link: "https://w.app/simplifier-site",
+          ctaText: "Quero um sistema sob medida →"
         }
       ]
     },
     audience: {
       title: "Para quem é",
-      description: "Pequenas e médias empresas que já trabalham muito — e querem trabalhar melhor."
+      description: "Para quem já tem operação rodando, time envolvido e a sensação de que o negócio depende demais de uma pessoa só."
     },
     results: {
       title: "Resultados que você vai sentir",
