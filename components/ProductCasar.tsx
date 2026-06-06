@@ -56,8 +56,15 @@ const ProductCasar: React.FC = () => {
             
             <p className="text-xs text-gray-brand/50 mb-6 italic">Nota: Parte do ecossistema Simplifier</p>
             
-            <a href="https://wa.me/seunumerowhatsapp" className="inline-block text-center bg-brown-brand text-white font-bold py-4 px-10 rounded-xl hover:bg-dark-teal transition-all hover:scale-[1.02]">
+            <a 
+              href="https://wa.me/seunumerowhatsapp" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 bg-[#ED8932] text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-[#d9731e] transition-all group shadow-md hover:shadow-xl hover:scale-[1.02] w-full sm:w-auto"
+            >
               Falar com um consultor
+              <span className="w-10 h-[2px] bg-white/70 block transition-transform group-hover:translate-x-1.5 duration-200 shrink-0"></span>
+              <span className="-ml-1 text-white">→</span>
             </a>
           </div>
         </div>

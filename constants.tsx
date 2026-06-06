@@ -51,8 +51,8 @@ export const CONTENT = {
   [AUDIENCE_TYPES.COMPANIES]: {
     hero: {
       tag: "Para seu negócio",
-      headline: "A maioria automatiza o caos. A gente organiza primeiro.",
-      subheadline: "Estruturamos processos, decisões e times para que seu negócio funcione — sem depender só de você.",
+      headline: "A maioria automatiza o caos.\nA gente organiza primeiro.",
+      subheadline: "Equilíbrio entre transformação e credibilidade. Construímos a tecnologia que faz seu negócio rodar sozinho, soluções de e-commerce, automações e sistemas feitos para durar.",
       cta: "Falar com a Simplifier →",
       ctaLink: "#produtos"
     },
@@ -102,7 +102,7 @@ export const CONTENT = {
           description: "Você não precisa entender de tecnologia para ter um e-commerce profissional. Precisa de alguém que entenda por você.",
           icon: <ShoppingBag className="w-6 h-6" />,
           highlight: true,
-          link: "https://wa.me/seunumerowhatsapp"
+          link: "/ecommerce"
         },
         { 
           category: "Automações de processos",
