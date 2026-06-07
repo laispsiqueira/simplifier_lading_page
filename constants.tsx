@@ -111,7 +111,7 @@ export const CONTENT = {
           description: "Automatizamos as tarefas que consomem o seu time para que as pessoas certas foquem no que só elas podem fazer.", 
           icon: <Workflow className="w-6 h-6" />,
           highlight: false,
-          link: "https://w.app/simplifier-site",
+          link: "/automation",
           ctaText: "Quero automatizar minha operação →"
         },
         { 
