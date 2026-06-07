@@ -8,6 +8,7 @@ import ResultsSection from './components/ResultsSection';
 import Footer from './components/Footer';
 import EcommercePage from './components/EcommercePage';
 import ManifestoPage from './components/ManifestoPage';
+import AutomationPage from './components/AutomationPage';
 import { CONTENT, AUDIENCE_TYPES, AudienceType } from './constants';
 
 const App: React.FC = () => {
@@ -16,6 +17,7 @@ const App: React.FC = () => {
   const [currentPath, setCurrentPath] = useState<string>(() => {
     const path = window.location.pathname;
     if (path === '/ecommerce') return '/ecommerce';
+    if (path === '/automation') return '/automation';
     if (path === '/manifesto') return '/manifesto';
     return '/';
   });
@@ -28,6 +30,8 @@ const App: React.FC = () => {
       const path = window.location.pathname;
       if (path === '/ecommerce') {
         setCurrentPath('/ecommerce');
+      } else if (path === '/automation') {
+        setCurrentPath('/automation');
       } else if (path === '/manifesto') {
         setCurrentPath('/manifesto');
       } else {
@@ -50,11 +54,13 @@ const App: React.FC = () => {
       if (anchorNode) {
         const href = anchorNode.getAttribute('href');
         if (href) {
-          if (href === '/ecommerce' || href === '/manifesto' || href === '/' || href.startsWith('/#') || href.startsWith('/manifesto#')) {
+          if (href === '/ecommerce' || href === '/automation' || href === '/manifesto' || href === '/' || href.startsWith('/#') || href.startsWith('/manifesto#')) {
             e.preventDefault();
             
             if (href === '/ecommerce') {
               onNavigate('/ecommerce');
+            } else if (href === '/automation') {
+              onNavigate('/automation');
             } else if (href === '/manifesto') {
               onNavigate('/manifesto');
             } else if (href === '/') {
@@ -107,6 +113,10 @@ const App: React.FC = () => {
       {currentPath === '/ecommerce' ? (
         <main className="flex-grow">
           <EcommercePage onBackToHome={() => onNavigate('/')} />
+        </main>
+      ) : currentPath === '/automation' ? (
+        <main className="flex-grow">
+          <AutomationPage onBackToHome={() => onNavigate('/')} />
         </main>
       ) : currentPath === '/manifesto' ? (
         <main className="flex-grow">

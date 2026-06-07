@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
             <h4 className="text-orange-brand font-bold mb-6 uppercase tracking-widest text-xs">Produtos</h4>
             <ul className="space-y-4 text-white/70 text-sm">
               <li><a href="/ecommerce" className="hover:text-white transition-colors">E-commerce</a></li>
-              <li><a href="/#produtos" className="hover:text-white transition-colors">Automação de Processos</a></li>
+              <li><a href="/automation" className="hover:text-white transition-colors">Automação de Processos</a></li>
               <li><a href="/#produtos" className="hover:text-white transition-colors">Sistemas Sob Medida</a></li>
             </ul>
           </div>

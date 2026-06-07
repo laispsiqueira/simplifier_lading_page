@@ -152,19 +152,22 @@ const Navbar: React.FC<NavbarProps> = ({ audience, setAudience, currentPath, onN
                         </a>
                         
                         <a 
-                          href="#produtos"
+                          href="/automation"
                           onClick={(e) => {
-                            handleNavLinkClick(e, '#produtos');
+                            e.preventDefault();
                             setDropdownOpen(false);
+                            onNavigate('/automation');
                           }}
-                          className="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal/30 transition-colors group"
+                          className={`flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal/30 transition-colors group ${
+                            currentPath === '/automation' ? 'bg-[#f0f8fa]' : ''
+                          }`}
                         >
                           <div className="w-8 h-8 rounded-lg bg-primary-teal/10 flex items-center justify-center shrink-0 mt-0.5">
                             <Workflow className="w-4 h-4 text-primary-teal" />
                           </div>
                           <div>
                             <span className="block text-sm font-bold text-dark-teal group-hover:text-primary-teal">
-                              Automação de processos
+                              Automação de processos ✨
                             </span>
                             <span className="block text-[11px] text-gray-brand/80 leading-snug">
                               O que depende de você, amanhã roda só
@@ -266,12 +269,18 @@ const Navbar: React.FC<NavbarProps> = ({ audience, setAudience, currentPath, onN
                         </li>
                         <li>
                           <a 
-                            href="#produtos"
-                            onClick={(e) => handleNavLinkClick(e, '#produtos')}
-                            className="flex items-center gap-2 text-base text-gray-brand hover:text-primary-teal"
+                            href="/automation"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setMobileMenuOpen(false);
+                              onNavigate('/automation');
+                            }}
+                            className={`flex items-center gap-2 text-base font-semibold ${
+                              currentPath === '/automation' ? 'text-[#157D9A]' : 'text-slate-600 hover:text-primary-teal'
+                            }`}
                           >
-                            <span className="w-1.5 h-1.5 rounded-full bg-slate-100"></span>
-                            Automação de processos
+                            <span className={`w-1.5 h-1.5 rounded-full ${currentPath === '/automation' ? 'bg-[#157D9A]' : 'bg-slate-300'}`}></span>
+                            Automação de processos ✨
                           </a>
                         </li>
                         <li>

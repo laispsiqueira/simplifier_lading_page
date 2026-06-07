@@ -35,17 +35,17 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
   const inclusions = [
     {
       title: "Escolha e configuração da plataforma",
-      description: "Analisamos o seu negócio e indicamos se Shopify ou Nuvemshop faz mais sentido para o seu momento. Depois configuramos tudo do zero.",
+      description: "Analisamos seu negócio e indicamos se Shopify ou Nuvemshop faz mais sentido. Depois configuramos tudo do zero.",
       icon: <Layers className="w-5 h-5 text-primary-teal" />
     },
     {
       title: "Identidade visual aplicada",
-      description: "Sua loja com a cara da sua marca — cores, tipografia, banners e estrutura visual alinhados com quem você é.",
+      description: "Sua loja com a cara da sua marca — cores, tipografia e banners alinhados com quem você é.",
       icon: <Cpu className="w-5 h-5 text-primary-teal" />
     },
     {
       title: "Cadastro de produtos",
-      description: "Fotos, descrições, variações, preços e estoque organizados e prontos para vender.",
+      description: "Fotos, descrições, variações e estoque organizados e prontos para vender.",
       icon: <ShoppingBag className="w-5 h-5 text-primary-teal" />
     },
     {
@@ -55,12 +55,12 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
     },
     {
       title: "Configuração para venda internacional",
-      description: "Para quem quer vender além do Brasil: moeda, idioma e meios de pagamento globais incluídos.",
+      description: "Moeda, idioma e meios de pagamento globais para quem quer vender além do Brasil.",
       icon: <Globe className="w-5 h-5 text-primary-teal" />
     },
     {
       title: "Testes e entrega final",
-      description: "Antes de entregar, testamos toda a jornada de compra. Do clique no produto até a confirmação do pedido.",
+      description: "Testamos toda a jornada de compra antes de entregar. Do clique no produto até a confirmação do pedido.",
       icon: <MousePointer className="w-5 h-5 text-primary-teal" />
     }
   ];
@@ -84,26 +84,26 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
     {
       num: "04",
       title: "Entrega e ativação",
-      description: "Testamos tudo, treinamos você para gerenciar a loja e entregamos com a loja no ar e pronta para vender."
+      description: "Os fluxos entram em operação real, documentados e com você entendendo o que foi construído. Você sai com uma loja que vende — não com uma loja que existe."
     }
   ];
 
   const faqs = [
     {
-      q: "Vou conseguir gerenciar a loja depois que vocês entregarem?",
-      a: "Sim. Shopify e Nuvemshop foram criadas para que qualquer pessoa consiga adicionar produtos, ver pedidos e fazer atualizações simples sem precisar de ajuda técnica. E entregamos um treinamento junto com a loja."
+      q: "Preciso ter muitos produtos para começar?",
+      a: "Não. Você pode lançar com poucos e ir expandindo. O que importa é que a estrutura esteja certa desde o início."
+    },
+    {
+      q: "Quanto tempo leva para ficar pronto?",
+      a: "Na média, entre 2 e 4 semanas — dependendo do escopo e da sua disponibilidade para feedbacks."
+    },
+    {
+      q: "Vou conseguir gerenciar a loja depois?",
+      a: "Sim. Shopify e Nuvemshop foram criadas para que qualquer pessoa consiga atualizar produtos e acompanhar pedidos sem ajuda técnica. E entregamos um treinamento junto com a loja."
     },
     {
       q: "E se algo parar de funcionar depois da entrega?",
       a: "As plataformas têm suporte 24 horas disponível direto com elas. Além disso, deixamos tudo documentado para que você saiba o que fazer em cada situação."
-    },
-    {
-      q: "Preciso ter muito produto cadastrado para começar?",
-      a: "Não. Você pode lançar com poucos produtos e ir expandindo. O que importa é que a estrutura esteja certa desde o início."
-    },
-    {
-      q: "Quanto tempo leva para ficar pronto?",
-      a: "Depende do escopo e da sua disponibilidade para feedbacks. Na média, projetos completos ficam prontos entre 2 e 4 semanas."
     }
   ];
 
@@ -141,20 +141,10 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
           </h1>
           
           <p className="text-lg md:text-xl text-gray-brand/80 max-w-2xl mx-auto font-light font-sans leading-relaxed">
-            Criamos e-commerces em Shopify e Nuvemshop para quem quer entrar no digital com estrutura
+            Criamos e-commerces em Shopify e Nuvemshop para quem quer entrar no digital com estrutura — e sair vendendo de verdade.
           </p>
           
-          <div className="pt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-[#157D9A] text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-[#0d5164] transition-all group shadow-md hover:shadow-xl hover:scale-[1.02] w-full sm:w-auto"
-            >
-              Falar com a Simplifier
-              <span className="w-10 h-[2px] bg-white/70 block transition-transform group-hover:translate-x-1.5 duration-200 shrink-0"></span>
-              <span className="-ml-1 text-white">→</span>
-            </a>
+          <div className="pt-6 flex justify-center items-center">
             <a 
               href={WHATSAPP_DUVIDA_LINK}
               target="_blank"
@@ -165,15 +155,15 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
             </a>
           </div>
 
-          <div className="pt-12 flex justify-center items-center gap-8 md:gap-12 opacity-75">
+          <div className="pt-12 flex justify-center items-center gap-10 md:gap-16 opacity-90">
             <div className="text-center">
-              <span className="block text-3xl font-bold text-dark-teal">Shopify</span>
-              <span className="text-xs text-gray-brand/70 uppercase tracking-widest font-bold">Parceiro Global</span>
+              <span className="block text-4xl font-extrabold text-[#50B83C]">Shopify</span>
+              <span className="text-xs text-gray-brand/70 uppercase tracking-widest font-extrabold">Parceiro Global</span>
             </div>
-            <div className="h-8 w-px bg-gray-brand/20"></div>
+            <div className="h-10 w-px bg-gray-brand/30"></div>
             <div className="text-center">
-              <span className="block text-3xl font-bold text-dark-teal">Nuvemshop</span>
-              <span className="text-xs text-gray-brand/70 uppercase tracking-widest font-bold">Líder LatAm</span>
+              <span className="block text-4xl font-extrabold text-[#0066FF]">Nuvemshop</span>
+              <span className="text-xs text-gray-brand/70 uppercase tracking-widest font-extrabold">Líder LatAm</span>
             </div>
           </div>
         </div>
@@ -193,17 +183,14 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
             </div>
             
             <div className="lg:col-span-7 space-y-6 text-gray-brand md:text-lg leading-relaxed">
-              <p>
-                Plataforma para escolher. Layout para configurar. Meios de pagamento para integrar. Frete para calcular. Produto para cadastrar. E no meio disso tudo, ainda tem o seu negócio real para tocar.
-              </p>
-              <p className="font-medium text-dark-teal">
-                A maioria das lojas que falham não falham por falta de produto bom ou de cliente interessado.
+              <p className="italic text-slate-500 font-medium">
+                Plataforma para escolher. Layout para configurar. Pagamentos para integrar. Frete para calcular. Produto para cadastrar.
               </p>
               <p>
-                Falham porque foram construídas sem estrutura. Com plataforma errada, experiência ruim de compra e sem ninguém para ajudar quando algo para de funcionar.
+                A maioria das lojas que falham não falham por falta de produto bom. Falham porque foram construídas sem estrutura — plataforma errada, experiência ruim de compra, ninguém para ajudar quando algo para.
               </p>
-              <div className="p-4 bg-white border border-light-teal rounded-xl shadow-sm text-center md:text-left">
-                <span className="font-bold text-primary-teal">Você não precisa aprender tudo isso.</span> Precisa de alguém que já sabe.
+              <div className="p-5 bg-white border border-light-teal rounded-2xl shadow-sm font-semibold text-dark-teal">
+                Você não precisa aprender tudo isso. <span className="text-[#157D9A]">Precisa de alguém que já sabe.</span>
               </div>
             </div>
             
@@ -242,18 +229,15 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-4 space-y-6">
-              <span className="text-xs font-bold text-orange-brand uppercase tracking-wider block">Garantia de escalabilidade</span>
+              <span className="text-xs font-bold text-orange-brand uppercase tracking-wider block">Ferramentas de alto nível</span>
               <h2 className="font-title text-3xl font-extrabold text-dark-teal leading-tight">
                 Não usamos qualquer plataforma. Escolhemos as que não travam quando você mais precisa.
               </h2>
               <p className="text-sm text-gray-brand/80 leading-relaxed">
-                Existem dezenas de plataformas de e-commerce no mercado. A maioria funciona bem — até o dia em que você precisa crescer, integrar um novo sistema ou passar por uma Black Friday.
-              </p>
-              <p className="text-sm text-gray-brand/80 leading-relaxed">
-                Shopify e Nuvemshop são as duas plataformas com infraestrutura comprovada, suporte 24 horas e ecossistema de integrações que acompanha o crescimento do seu negócio.
+                Existem dezenas de plataformas no mercado. A maioria funciona — até o dia em que você precisa crescer ou passar por uma Black Friday.
               </p>
               <p className="text-sm font-semibold text-primary-teal">
-                Escolhemos essas duas porque não queremos que você troque de plataforma daqui a um ano.
+                Escolhemos Shopify e Nuvemshop porque não queremos que você troque de plataforma daqui a um ano.
               </p>
             </div>
 
@@ -306,6 +290,7 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
         <div className="max-w-5xl mx-auto px-6">
           
           <div className="text-center mb-16 space-y-4">
+            <span className="text-sm font-extrabold tracking-widest text-[#ED8932] uppercase block">Seja honesto com você mesmo</span>
             <h2 className="font-title text-4xl font-extrabold text-dark-teal">Este projeto faz sentido para você?</h2>
             <p className="text-gray-brand font-light">Transparência completa para otimizar o tempo de ambos os lados.</p>
           </div>
@@ -320,19 +305,19 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
               <ul className="space-y-4">
                 <li className="flex gap-3 text-sm text-gray-brand items-start">
                   <div className="w-5 h-5 rounded-full bg-green-500/10 text-green-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">✓</div>
-                  <span>Você ainda não vende online e quer começar do jeito certo.</span>
+                  <span>Sua operação só existe no físico ou offline e você quer começar no digital sem erros.</span>
                 </li>
                 <li className="flex gap-3 text-sm text-gray-brand items-start">
                   <div className="w-5 h-5 rounded-full bg-green-500/10 text-green-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">✓</div>
-                  <span>Você já vende, mas sua loja atual trava, tem visual ultrapassado ou não converte.</span>
+                  <span>Sua loja atual vive travando, tem design ultrapassado ou simplesmente não gera vendas.</span>
                 </li>
                 <li className="flex gap-3 text-sm text-gray-brand items-start">
                   <div className="w-5 h-5 rounded-full bg-green-500/10 text-green-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">✓</div>
-                  <span>Você quer expandir para outros países mas não sabe por onde começar.</span>
+                  <span>Seus planos de vender para fora esbarram no medo de moedas, taxas e envio internacional.</span>
                 </li>
                 <li className="flex gap-3 text-sm text-gray-brand items-start">
                   <div className="w-5 h-5 rounded-full bg-green-500/10 text-green-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">✓</div>
-                  <span>Você tentou montar sozinho e percebeu que precisa de alguém que entenda do assunto.</span>
+                  <span>Sua tentativa de montar a loja sozinho tomou muito tempo e gerou mais frustração do que resultado.</span>
                 </li>
               </ul>
             </div>
@@ -345,15 +330,15 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
               <ul className="space-y-4">
                 <li className="flex gap-3 text-sm text-gray-brand items-start">
                   <div className="w-5 h-5 rounded-full bg-orange-500/10 text-orange-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">✕</div>
-                  <span>Você quer uma loja pronta em 24 horas sem nenhuma personalização.</span>
+                  <span>Sua expectativa é ter uma loja genérica no ar em 24 horas aberta de qualquer jeito.</span>
                 </li>
                 <li className="flex gap-3 text-sm text-gray-brand items-start">
                   <div className="w-5 h-5 rounded-full bg-orange-500/10 text-orange-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">✕</div>
-                  <span>Você não tem produto definido nem preço calculado.</span>
+                  <span>Seus produtos ainda não estão definidos e você não sabe por quanto vai vendê-los.</span>
                 </li>
                 <li className="flex gap-3 text-sm text-gray-brand items-start">
                   <div className="w-5 h-5 rounded-full bg-orange-500/10 text-orange-600 flex items-center justify-center shrink-0 mt-0.5 font-bold">✕</div>
-                  <span>Você busca o mais barato do mercado, não o mais sólido.</span>
+                  <span>Seu foco é exclusivamente encontrar o serviço mais barato do mercado, sem priorizar a estrutura.</span>
                 </li>
               </ul>
             </div>
@@ -372,7 +357,7 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
       <section className="py-24 bg-slate-50 border-t border-b border-light-teal">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16 space-y-4">
-            <span className="text-sm font-extrabold tracking-widest text-[#ED8932] uppercase block">Metodologia Simplificada</span>
+            <span className="text-sm font-extrabold tracking-widest text-[#ED8932] uppercase block">Metodologia Simplifier</span>
             <h2 className="font-title text-4xl font-extrabold text-dark-teal">Do primeiro contato à loja no ar</h2>
             <div className="w-16 h-1 bg-[#ED8932] mx-auto rounded-full"></div>
           </div>
@@ -454,24 +439,16 @@ const EcommercePage: React.FC<EcommercePageProps> = ({ onBackToHome }) => {
             A gente resolve isso.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 w-full max-w-2xl mx-auto">
+          <div className="flex justify-center items-center pt-4">
             <a 
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-[#157D9A] text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-[#0d5164] transition-all group shadow-md hover:shadow-xl hover:scale-[1.02] w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-3 bg-white text-dark-teal px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all group shadow-md hover:shadow-xl hover:scale-[1.02] w-full sm:w-auto"
             >
-              Falar com a Simplifier
-              <span className="w-10 h-[2px] bg-white/70 block transition-transform group-hover:translate-x-1.5 duration-200 shrink-0"></span>
-              <span className="-ml-1 text-white">→</span>
-            </a>
-            <a 
-              href={WHATSAPP_DUVIDA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center border border-white/30 text-white hover:bg-white/10 px-10 py-5 rounded-xl font-semibold text-base transition-all hover:scale-[1.02]"
-            >
-              Ainda tenho dúvidas — falar antes
+              Quero minha loja online
+              <span className="w-10 h-[2px] bg-dark-teal/50 block transition-transform group-hover:translate-x-1.5 duration-200 shrink-0"></span>
+              <span className="-ml-1 text-dark-teal">→</span>
             </a>
           </div>
         </div>
